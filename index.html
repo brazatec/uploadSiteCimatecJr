@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR" dir="ltr">
+    <head>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+        <meta charset ="utf-8">
+        <title>CyberPrimeTentei </title>
+    </head>
+
+
+    <body>
+        
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#galeria">Galeria</a></li>
+                <li><a href="#contato">Contato</a></li>
+            </ul>
+        </nav>
+    
+        <section class="presentation-section">
+            <h1>🤖 CYBER PRIME 🎮</h1>
+            <p>Mergulhe em mundos de jogos virtuais incríveis e realistas com total imersão, utilizando o mais alto nível de tecnologia.</p>
+        </section>
+
+
+        <!--Codigo Carrossel-->
+
+        <div class="carousel">
+            <!-- Link para suas imagens (substitua "sua-imagem-x.jpg" pelo link da sua imagem) -->
+            <img src="gow.png" alt="Imagem 1" class="active">
+            <img src="HL.jpg" alt="Imagem 2">
+            <img src="TLOU2.jpg" alt="Imagem 3">
+            <img src="CIMAJR.jpg" alt="Imagem 4">
+            
+            <!-- Botões de navegação -->
+            <button class="prev" onclick="showPrevImage()">&#10094;</button>
+            <button class="next" onclick="showNextImage()">&#10095;</button>
+        </div>
+    
+        <script>
+            // JavaScript para controlar o carrossel
+            let currentIndex = 0;
+            const images = document.querySelectorAll('.carousel img');
+    
+            function showImage(index) {
+                images.forEach(img => img.classList.remove('active'));
+                images[index].classList.add('active');
+            }
+    
+            function showNextImage() {
+                currentIndex = (currentIndex + 1) % images.length;
+                showImage(currentIndex);
+            }
+    
+            function showPrevImage() {
+                currentIndex = (currentIndex - 1 + images.length) % images.length;
+                showImage(currentIndex);
+            }
+        
+    </script>
+
+<!--Catalogo de Produtos-->
+        <section class="product-section">
+        <h2>Produtos em Destaque</h2>
+        <div class="product-container">
+
+            <!-- Cartão de produto 1 -->
+            <div class="product-card" data-info="Hardware de Última Geração: Desfrute de gráficos e performance superiores.">
+                <img src="console.png" alt="Console de Video Game">
+                <h3>Console de Última Geração</h3>
+                <p>Desfrute de gráficos incríveis e uma performance incomparável com o mais novo console.</p>
+                <button class="saiba-mais">Saiba Mais</button>
+            </div>
+
+            <!-- Cartão de produto 2 -->
+            <div class="product-card" data-info="Compatibilidade com Diversos Jogos: Amplie sua biblioteca de jogos.">
+                <img src="controle.png" alt="Controle de Video Game">
+                <h3>Controle Ergonômico</h3>
+                <p>Projetado para horas de conforto e precisão em suas sessões de jogo.</p>
+                <button class="saiba-mais">Saiba Mais</button>
+            </div>
+
+            <!-- Cartão de produto 3 -->
+            <div class="product-card" data-info="Realidade Virtual mais Realista que Nunca: Experimente a imersão total.">
+                <img src="VR.png" alt="Óculos de Realidade Virtual">
+                <h3>Óculos VR</h3>
+                <p>Imersão total em seus jogos favoritos com a última tecnologia de realidade virtual.</p>
+                <button class="saiba-mais">Saiba Mais</button>
+            </div>
+
+            <!-- Cartão de produto 4 -->
+            <div class="product-card" data-info="Realidade Virtual mais Realista que Nunca: Experimente a imersão total.">
+                <img src="headset.png" alt="Headset Gamer">
+                <h3>Headset Gamer</h3>
+                <p>Áudio cristalino e conforto total para aproveitar cada detalhe sonoro.</p>
+                <button class="saiba-mais">Saiba Mais</button>
+            </div>
+
+        </div>
+    
+    </section>
+
+               <!-- Modal -->
+       <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="modal-text"></p>
+        </div>
+        </div>
+
+
+    <script src="script.js"></script>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Logo</h3>
+                <p>O sonho de todo Gamer é aqui.</p>
+                <div class="social-icons">
+                    <a href="#"><img src="https://img.icons8.com/color/48/000000/instagram-new.png" alt="Instagram"></a>
+                    <a href="#"><img src="https://img.icons8.com/color/48/000000/facebook-new.png" alt="Facebook"></a>
+                    <a href="#"><img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp"></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Blog</h3>
+                <ul>
+                    <li><a href="#">Tech</a></li>
+                    <li><a href="#">Adventures</a></li>
+                    <li><a href="#">Music</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Produtos</h3>
+                <ul>
+                    <li><a href="#">App</a></li>
+                    <li><a href="#">Desktop</a></li>
+                    <li><a href="#">Cloud</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Inscreva-se!</h3>
+                <p>Digite seu e-mail para receber ofertas e promoções.</p>
+                <form action="#">
+                    <input type="email" placeholder="Your email">
+                    <button type="submit">📧</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2024 CIMATEC JR., all rights reserved.
+        </div>
+    </footer>
+
+    </body>
+    
+    </html>
